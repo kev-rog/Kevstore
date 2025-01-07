@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    
+    <!-- Integración de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="text-white text-center py-3" id="header">
+        <h1>Kevstore</h1>
+ 
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="catalogo.html">Catálogo</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container mt-5">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Carrito de Compras</h1>
+            <h3>Información de Pago</h3>
+            <form action="compra_exito.html" method="POST">
+                <div class="form-group mb-3">
+                    <label for="nombre">Nombre en la tarjeta:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="numero">Número de la tarjeta:</label>
+                    <input type="text" id="numero" name="numero" class="form-control" required pattern="\d{13,16}" title="Ingrese un número de tarjeta válido de 13 a 16 dígitos">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="fecha">Fecha de vencimiento:</label>
+                    <input type="month" id="fecha" name="fecha" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="cvv">Código CVV:</label>
+                    <input type="text" id="cvv" name="cvv" class="form-control" required pattern="\d{3,4}" title="Ingrese un CVV de 3 o 4 dígitos">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Confirmar Compra</button>
+            </form>
+        </div>
+    </main>
+    <div class="container" id="payment">
+        
+        <div class="payment-methods">
+            <div class="payment-method">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR01IiJEzLYwzuQethJraGGG-3-vbKQ8AbQTQ&s" alt="PayPal">
+                <p>PayPal</p>
+            </div>
+            <div class="payment-method">
+                <img src="https://thumbs.dreamstime.com/b/visa-logo-white-background-vector-format-avaliable-editorial-illustration-isolated-168841186.jpg" alt="Visa">
+                <p>Visa</p>
+            </div>
+            <div class="payment-method">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png" alt="MasterCard">
+                <p>MasterCard</p>
+            </div>
+        </div>
+
+    <!-- Pie de página -->
+    
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
